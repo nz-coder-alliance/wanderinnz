@@ -1,0 +1,12 @@
+{
+  "name": "react-app",
+  "version": "1.0.0",
+  "devDependencies": {
+    "webpack": "*",
+    "gulp": "3.x.x",
+    "gulp-code": "*",
+    "gulp-uglify": "*",
+    "gulp-webpack": "*",
+    "gulp-react": "*"
+  }
+}

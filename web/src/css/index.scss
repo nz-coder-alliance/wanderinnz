@@ -1,0 +1,280 @@
+
+html,body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: helvetica;
+    background-image: url(//img.alicdn.com/tps/i3/TB1B2HjHVXXXXcfXXXXQoccZVXX-320-549.jpg);
+    background-size: 100% 100%;
+    background-position: top;
+}
+
+.checkbox {
+
+    width: 12px;
+    height: 12px;
+    border: 2px solid #99cc33;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+
+    &.checked {
+        i {
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-image: url(//img.alicdn.com/tps/i4/TB1WNFdIXXXXXaPXpXXEw4NGpXX-35-24.png);
+            background-size: 100% 100%;
+            width: 13px;
+            height: 12px;
+            border: none;
+        }
+    }
+}
+
+.app {
+
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-transition: opacity 0.3s ease;
+    -webkit-transform-origin-y: 0;
+
+    &.ios {
+        -webkit-overflow-scrolling: touch;
+
+        .app-view {
+            -webkit-overflow-scrolling: touch;
+
+            .app-view-content {
+                -webkit-overflow-scrolling: touch;
+            }
+        }
+    }
+
+    .app-view {
+
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow: auto;
+        overflow-x: hidden;
+        margin-bottom: 1px;
+        width: 100%;
+        height: 100%;
+        -webkit-transform: translateY(0);
+
+        &.collapsed {
+            /*display: none;*/
+            -webkit-transform: translateY(100%);
+        }
+
+        /*.app-view-box {
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+        }*/
+        .app-view-content {
+
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            overflow: auto;
+            overflow-x: hidden;
+            -webkit-backface-visibility: hidden;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            /*left: 0;
+            top: 0;*/
+        }
+    }
+}
+
+#car-nav {
+
+    width: 140px;
+    height: 20px;
+    margin: 6px auto;
+    position: relative;
+
+    .nav-item {
+
+        position: absolute;
+        left: 50%;
+        top: 0;
+        width: 110px;
+        height: 20px;
+        line-height: 20px;
+        margin-left: -55px;
+        text-align: center;
+        color: #fff;
+    
+        &.current {
+
+            background-color: #9c3;
+            border-radius: 10px;
+
+            span {
+                display: inline-block;
+            }
+        }
+
+        span {
+            display: none;
+        }
+    }
+}
+
+#slider {
+
+    width: 300px;
+    height: 323px;
+    margin: 60px auto;
+    position: relative;
+
+    .arrow {
+
+        top: 92px;
+
+        &.left {
+            left: -6px;
+        }
+
+        &.right {
+            right: -6px;
+        }
+    }
+
+/*//img.alicdn.com/tps/i2/TB1Yl2QHVXXXXbCXpXXYJVJMpXX-260-328.png);*/
+    .card {
+        width: 280px;
+        height: 328px;
+        display: inline-block;
+        position: absolute;
+        left: 10px;
+        top: 0;
+    
+        .car {
+
+            width: 100%;
+            height: 207px;
+            position: relative;
+        
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .car-name {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 30px;
+                color: #999999;
+                border-bottom: 2px solid #99cc33;
+                background-color: rgba(51,51,51,0.75);
+                text-align: center;
+                line-height: 30px;
+            }
+        }
+
+        .card-footer {
+            background-image: url(//img.alicdn.com/tps/i3/TB1wNwcIXXXXXbjXVXXFHf34VXX-650-271.png);
+            background-size: 100% 100%;
+            width: 100%;
+            height: 116px;
+
+            &.win {
+                color: #CCC;
+                text-align: center;
+                line-height: 116px;
+            }
+        }
+    
+        .button {
+            position: absolute;
+            left: 50%;
+            bottom: 45px;
+            margin-left: -110px;
+            width: 220px;
+        }
+    
+        .close, .disabled {
+            height: 45px;
+            background-image: url(//img.alicdn.com/tps/i2/TB1KUMxHVXXXXb9XFXXIQ4bPXXX-506-105.png);
+            background-size: 100% auto;
+        }
+
+        .close:after, .disabled:after {
+            line-height: 45px;
+            height: 45px;
+            width: 100%;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 800;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .permitted {
+            height: 65px;
+            background-image: url(//img.alicdn.com/tps/i1/TB1UzxaIXXXXXcUXpXXhgXjPXXX-506-150.png);
+            background-size: 100% auto;
+        }
+    
+        .agreement {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            height: 26px;
+            line-height: 26px;
+            font-size: 12px;
+            text-align: center;
+            color: #99CC33;
+        
+            #rule{
+                color: #FFF;
+                text-decoration: underline;
+            }
+        }
+
+        .winner {
+            position: absolute;
+            bottom: 12px;
+            left: 0;
+            width: 100%;
+            color:#fff;
+            text-align: center;
+        
+            .nick {
+                margin-top: 5px;
+                color:#ff3366;
+            }
+    
+            .content {
+                span {
+                    color:#f36;
+                }
+            }
+
+            .avatar {
+                width: 50px;
+                height: 50px;
+                border: 4px solid #f36;
+                border-radius: 50%;
+                margin: 5px auto;
+                overflow: hidden;
+            }
+        }
+    }
+}

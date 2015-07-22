@@ -1,0 +1,41 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello React</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="./build/css/index.css">
+    <script src="./node_modules/react/dist/react.js"></script>
+    <script src="./node_modules/react/dist/react-with-addons.js"></script>
+
+  </head>
+  <body>
+    <style>
+    #slider .card .close:after {
+        content: '尚未开始';
+    }
+    #slider .card .close.over:after {
+        content: '比赛结束';
+    }
+    #slider .card .disabled:after {
+        content: '比赛开始';
+    }
+    #rank-panel li.opened .status:after {
+        content: '去比赛';
+    }
+    #rank-panel li.over .status:after {
+        content: '已结束';
+    }
+    #rank-panel li.unopened .status:after {
+        content: '未开始';
+    }
+    #car-slider .car .permitted:after {
+        content: '';
+    }
+    </style>
+    <div id="app"></div>
+    <script type="text/javascript" src="./build/main.js"></script>
+  </body>
+</html>
